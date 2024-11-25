@@ -22,21 +22,20 @@ public class JPAFind {
         // System.out.println(country.toString());
 
         try {
-            // Buscar el país con código "PER"
+
             Country peru = em.find(Country.class, "PER");
 
             if (peru != null) {
-                // Obtener todas las ciudades asociadas al país "PER"
+
                 List<City> allCities = em.createQuery("SELECT c FROM City c WHERE c.CountryCode = :countryCode", City.class)
                         .setParameter("countryCode", peru.getCode())
                         .getResultList();
 
-                // Usar una función lambda para filtrar ciudades con población > 700k
                 allCities.stream()
                         .filter(city -> city.getPopulation() > 700000)
                         .forEach(city -> System.out.println(city.getName()));
             } else {
-                System.out.println("No se encontró el país con código PER.");
+                System.out.println("No se encontró el país PER.");
             }
         } finally {
             em.close();
