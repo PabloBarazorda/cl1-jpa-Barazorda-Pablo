@@ -18,7 +18,7 @@ public class JPAPersist {
             em.getTransaction().begin();
 
             // Creamos el país
-            Country narnia = new Country("NAR", "Narnia", "Asia", "Islandia", 10000.0, 2022.0, 5000000.0, 80.0, 20000.0, 15000.0, "Noruega", "República", "Nashville", 1.0, "NR");
+            Country narnia = new Country("NAR", "Narnia", "Asia", "Islandia", 10000.0, 2022, 5000000.0, 80.0, 20000.0, 15000.0, "Noruega", "República", "Nashville", 1.0, "NR");
 
             // Crear ciudades
             City city1 = new City(5001.0, "Ciudad Gotica", "NAR", "Centro", 8600.0);

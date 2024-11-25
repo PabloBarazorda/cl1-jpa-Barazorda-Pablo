@@ -15,7 +15,7 @@ public class Country {
     private String Continent;
     private String Region;
     private Double SurfaceArea;
-    private Double IndepYear;
+    private Integer IndepYear;
     private Double Population;
     private Double LifeExpectancy;
     private Double GNP;
@@ -39,7 +39,7 @@ public class Country {
         Code = code;
     }
 
-    public Country(String code, String name, String continent, String region, Double surfaceArea, Double indepYear, Double population, Double lifeExpectancy, Double GNP, Double GNPOld, String localName, String governmentForm, String headOfState, Double capital, String code2) {
+    public Country(String code, String name, String continent, String region, Double surfaceArea, Integer indepYear, Double population, Double lifeExpectancy, Double GNP, Double GNPOld, String localName, String governmentForm, String headOfState, Double capital, String code2) {
         Code = code;
         Name = name;
         Continent = continent;
@@ -118,11 +118,11 @@ public class Country {
         SurfaceArea = surfaceArea;
     }
 
-    public Double getIndepYear() {
+    public Integer getIndepYear() {
         return IndepYear;
     }
 
-    public void setIndepYear(Double indepYear) {
+    public void setIndepYear(Integer indepYear) {
         IndepYear = indepYear;
     }
 
